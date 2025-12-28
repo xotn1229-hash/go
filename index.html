@@ -7,13 +7,21 @@
 
   <script>
     const inviteUrl = "https://lite.tiktok.com/t/ZSHKnjTFsenQE-GXk4b/";
-    const deepLink = "tiktoklite://";
 
-    window.location.href = deepLink;
+    const intentLink =
+      "intent://#Intent;" +
+      "scheme=tiktoklite;" +
+      "package=com.zhiliaoapp.musically.go;" +
+      "end";
 
-    setTimeout(function () {
+    if (/Android/i.test(navigator.userAgent)) {
+      window.location.href = intentLink;
+      setTimeout(function () {
+        window.location.href = inviteUrl;
+      }, 600);
+    } else {
       window.location.href = inviteUrl;
-    }, 400);
+    }
   </script>
 </head>
 <body>
