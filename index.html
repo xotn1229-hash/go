@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting</title>
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script>
-    location.replace("https://lite.tiktok.com/t/ZSHKnjTFsenQE-GXk4b/");
+    const inviteUrl = "https://lite.tiktok.com/t/ZSHKnjTFsenQE-GXk4b/";
+    const deepLink = "tiktoklite://";
+
+    window.location.href = deepLink;
+
+    setTimeout(function () {
+      window.location.href = inviteUrl;
+    }, 400);
   </script>
 </head>
-<body></body>
+<body>
+</body>
 </html>
