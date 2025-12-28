@@ -2,18 +2,28 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <title>Redirecting...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>보너스 받기</title>
+
+  <script>
+    const inviteUrl = "https://lite.tiktok.com/t/ZSHKnjTFsenQE-GXk4b/";
+
+    const intentLink =
+      "intent://#Intent;" +
+      "scheme=tiktoklite;" +
+      "package=com.zhiliaoapp.musically.go;" +
+      "end";
+
+    if (/Android/i.test(navigator.userAgent)) {
+      window.location.href = intentLink;
+      setTimeout(function () {
+        window.location.href = inviteUrl;
+      }, 600);
+    } else {
+      window.location.href = inviteUrl;
+    }
+  </script>
 </head>
-<body style="font-family:sans-serif;text-align:center;padding:40px">
-
-  <p>⚠️ 틱톡 앱 안에서는 바로 열리지 않습니다</p>
-  <p>아래 버튼 → <b>브라우저로 열기</b> 선택해주세요</p>
-
-  <button style="font-size:18px;padding:12px 20px"
-    onclick="window.open('https://xotn1229-hash.github.io/go/', '_blank')">
-    보너스 받으러 가기
-  </button>
-
+<body>
 </body>
 </html>
